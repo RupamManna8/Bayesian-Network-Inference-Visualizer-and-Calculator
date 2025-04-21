@@ -1,0 +1,321 @@
+/* BayesianNetwork.css */
+:root {
+  --primary: #4361ee;
+  --primary-light: #4895ef;
+  --secondary: #3f37c9;
+  --dark: #1b263b;
+  --light: #f8f9fa;
+  --success: #4cc9f0;
+  --danger: #f72585;
+  --warning: #f8961e;
+  --info: #43aa8b;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+.bayesian-network {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--dark);
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.bayesian-network h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+/* React Flow Container */
+.bayesian-network > div:first-of-type {
+  height: 500px;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+}
+
+/* Variable Input Section */
+.variable-input {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.variable-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.variable-input input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.variable-input button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.variable-input button:hover {
+  background-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+/* Variables List */
+.variables-list {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+}
+
+.variables-list h3 {
+  margin-top: 0;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.variable-item {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-light);
+  color: white;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dependency Selector */
+.dependency-selector {
+  margin: 1.5rem 0;
+}
+
+.dependency-selector h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.dependency-selector select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.dependency-selector select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+/* Probabilities Section */
+.probabilities {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+}
+
+.probabilities h3 {
+  margin-top: 0;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.input-group {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.input-group > div {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-group input[type="number"] {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  width: 80px;
+  text-align: center;
+}
+
+.input-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Probability Calculator */
+.probability-calculator {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--light);
+  border-radius: var(--border-radius);
+}
+
+.probability-calculator h3 {
+  margin-top: 0;
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+
+.probability-calculator > div {
+  margin-bottom: 1rem;
+}
+
+.probability-calculator label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.probability-calculator select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+/* Calculate Button */
+.bayesian-network > button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  background-color: var(--info);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.bayesian-network > button:hover {
+  background-color: #3a9275;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bayesian-network > button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Result Display */
+.result {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #e8f5e9;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2e7d32;
+}
+
+/* React Flow Custom Styling */
+.react-flow__node {
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: white;
+  border: 2px solid var(--primary);
+  width: 150px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--box-shadow);
+  color: var(--dark);
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.react-flow__edge-path {
+  stroke: var(--primary);
+  stroke-width: 2;
+}
+
+.react-flow__controls {
+  box-shadow: var(--box-shadow) !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.react-flow__controls button {
+  background-color: white !important;
+  border-bottom: 1px solid #eee !important;
+  transition: var(--transition);
+}
+
+.react-flow__controls button:hover {
+  background-color: var(--light) !important;
+}
+
+.react-flow__controls button:first-child {
+  border-top-left-radius: var(--border-radius) !important;
+  border-top-right-radius: var(--border-radius) !important;
+}
+
+.react-flow__controls button:last-child {
+  border-bottom-left-radius: var(--border-radius) !important;
+  border-bottom-right-radius: var(--border-radius) !important;
+  border-bottom: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .bayesian-network {
+    padding: 1rem;
+  }
+  
+  .variable-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .input-group > div {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

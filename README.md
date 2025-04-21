@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+## Bayesian Network Calculator (with Variable Elimination)
+This is a React-based visual tool for building custom Bayesian networks and performing probabilistic inference using the variable elimination algorithm.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# 🚀 Features
+🧠 Create custom variables representing nodes in your Bayesian network.
 
-In the project directory, you can run:
+🔁 Define dependencies (edges) between variables.
 
-### `npm start`
+📊 Assign conditional and unconditional probabilities.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔍 Query the probability of a variable given evidence using variable elimination.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🎨 Interactive graph visualization using React Flow.
 
-### `npm test`
+💡 Real-time inference updates.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 📦 Tech Stack
+React – UI framework
 
-### `npm run build`
+React Flow – Graph/network visualization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+CSS – Custom styles for the UI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+JavaScript – Core logic & inference algorithm implementation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🛠️ Setup Instructions
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/bayesian-network-calculator.git
+cd bayesian-network-calculator
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the App
+bash
+Copy
+Edit
+npm start
+This will launch the app at http://localhost:3000.
 
-### `npm run eject`
+# 🔧 Usage Guide
+➕ Add Variables
+Enter a variable name and click "Add Variable".
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each variable appears as a node in the graph.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🔗 Define Dependencies
+Use the dropdown to define parent → child relationships.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📈 Set Probabilities
+For independent variables: set P(Variable).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For dependent variables: set P(Child | Parent) (true/false cases).
 
-## Learn More
+❓ Query Probability
+Select a query variable and an evidence variable with a boolean value.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Click "Calculate Probability" to perform inference using variable elimination.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 🧠 Inference Logic
+This tool implements the variable elimination algorithm, which:
 
-### Code Splitting
+Builds factor tables from user-defined CPTs.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Restricts factors based on evidence.
 
-### Analyzing the Bundle Size
+Eliminates hidden variables via summation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Multiplies remaining factors and normalizes to get the final probability.
 
-### Making a Progressive Web App
+# 📁 File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+src/
+│
+├── BayesianNetwork.js   # Main component with logic and UI
+├── BayesianNetwork.css  # Styling
+├── App.js               # Entry point
+└── index.js             # ReactDOM render
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 📜 License
+MIT License — feel free to use, modify, and distribute.

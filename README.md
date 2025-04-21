@@ -1,8 +1,8 @@
-## Bayesian Network Calculator (with Variable Elimination)
+# Bayesian Network Calculator (with Variable Elimination)
 This is a React-based visual tool for building custom Bayesian networks and performing probabilistic inference using the variable elimination algorithm.
 
 
-# 🚀 Features
+## 🚀 Features
 🧠 Create custom variables representing nodes in your Bayesian network.
 
 🔁 Define dependencies (edges) between variables.
@@ -15,7 +15,7 @@ This is a React-based visual tool for building custom Bayesian networks and perf
 
 💡 Real-time inference updates.
 
-# 📦 Tech Stack
+## 📦 Tech Stack
 React – UI framework
 
 React Flow – Graph/network visualization
@@ -24,26 +24,24 @@ CSS – Custom styles for the UI
 
 JavaScript – Core logic & inference algorithm implementation
 
-# 🛠️ Setup Instructions
+## 🛠️ Setup Instructions
 1. Clone the Repository
-bash
-Copy
-Edit
-git clone https://github.com/your-username/bayesian-network-calculator.git
-cd bayesian-network-calculator
+
+ git clone https://github.com/RupamManna8/Bayesian-Network-Inference-Visualizer-and-Calculator.git
+
+ cd bayesian-network
+
 2. Install Dependencies
-bash
-Copy
-Edit
-npm install
+
+ npm install
+
 3. Run the App
-bash
-Copy
-Edit
-npm start
+
+ npm start
+ 
 This will launch the app at http://localhost:3000.
 
-# 🔧 Usage Guide
+## 🔧 Usage Guide
 ➕ Add Variables
 Enter a variable name and click "Add Variable".
 
@@ -62,7 +60,7 @@ Select a query variable and an evidence variable with a boolean value.
 
 Click "Calculate Probability" to perform inference using variable elimination.
 
-# 🧠 Inference Logic
+## 🧠 Inference Logic
 This tool implements the variable elimination algorithm, which:
 
 Builds factor tables from user-defined CPTs.
@@ -73,14 +71,16 @@ Eliminates hidden variables via summation.
 
 Multiplies remaining factors and normalizes to get the final probability.
 
-# 📁 File Structure
+## 📁 File Structure
 
 src/
-│
-├── BayesianNetwork.js   # Main component with logic and UI
-├── BayesianNetwork.css  # Styling
-├── App.js               # Entry point
-└── index.js             # ReactDOM render
 
-# 📜 License
+ │
+ ├── BayesianNetwork.js   # Main component with logic and UI
+ ├── BayesianNetwork.css  # Styling
+ ├── App.js               # Entry point
+ └── index.js             # ReactDOM render
+
+
+## 📜 License
 MIT License — feel free to use, modify, and distribute.
